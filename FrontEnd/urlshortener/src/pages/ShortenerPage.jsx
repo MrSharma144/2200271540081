@@ -22,7 +22,7 @@ const ShortenerPage = () => {
     for (const input of inputs) {
       try {
         if (!input.url.trim()) throw new Error('Empty URL');
-        new URL(input.url); // throws on invalid
+        new URL(input.url); 
         if (input.validity && isNaN(parseInt(input.validity))) throw new Error('Invalid validity');
 
         const shortcode = input.shortcode || Math.random().toString(36).substr(2, 6);
@@ -36,7 +36,7 @@ const ShortenerPage = () => {
         };
 
         newResults.push(result);
-        urlData.push(result); // add to shared memory
+        urlData.push(result); 
         logEvent(`Shortened: ${input.url} → ${shortUrl}`);
       } catch (err) {
         logEvent(`Validation error: ${err.message}`, 'warn');

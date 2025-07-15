@@ -1,4 +1,4 @@
-import './App.css'; // ✅ Import global CSS
+import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ShortenerPage from './pages/ShortenerPage';
